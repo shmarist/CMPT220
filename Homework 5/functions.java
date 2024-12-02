@@ -5,7 +5,7 @@ please go a little more complex than just simple math/simple printing for the fu
 feel free to google some inspiration though :)
 */
 
-public class Main {
+public class functions {
     public static void main(String[] args) {
     
     }
