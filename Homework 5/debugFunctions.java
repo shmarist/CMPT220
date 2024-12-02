@@ -12,7 +12,7 @@ I give you two fully working method examples with and without parameters and cal
 */
 
 import java.util.Scanner;
-public class Main {
+public class debugFunctions {
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
 
