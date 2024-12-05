@@ -7,6 +7,8 @@ check each of the students in main
 and see if any students match that id, if they do they get free lunch that day, yay!) compare a randomly generated id and the
 id of the student to print the appropriate response.
  */
+import java.util.Random;
+
 public class student{
     String name;
     String year;
@@ -20,8 +22,19 @@ public class student{
     }
     
     //new method
+    public boolean honorRoll(student student) {
+        return student.gpa > 3.6;
+    }
 
     
     //new method
+    public boolean freeLunch(student student) {
+        // ok you want me to generate a random id but it has to be the same random id for everyone so
+        // im not sure how im gonna do that when it has to change every 24h
+        // ill just pretend its just a 10% chance of getting free lunch or something i really dont
+        // know how to implement what you want  
+        Random random = new Random();
+        return student.id == random.nextInt(10);
+    }
 
 }
