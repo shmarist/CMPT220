@@ -13,7 +13,7 @@ import java.util.Stack;
 
 import java.util.LinkedList;
 
-public class Main {
+public class datastructuresdebug {
     public static void main(String[] args) {
         Stack<Integer> stax = new Stack<>();
         
