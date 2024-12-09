@@ -26,7 +26,11 @@ public class datastructuresdebug {
         stax.push(492);
         stax.push(386);
         
+        //the max is 807 and the min is 28
         
+        //PROBLEM 2
+        System.out.println("THERE ARE "+stax.size()+" ELEMENTS IN THE STACK");
+        //PLEASE GIVE ME 25% CREDIT PLEASE
         
         LinkedList<Integer> linky = new LinkedList<>();
 
@@ -36,6 +40,7 @@ public class datastructuresdebug {
         linky.add(40);
         linky.add(50);
 
-
+        //30 is the middle value of the list
+        //4. no its 5am
     }
 }

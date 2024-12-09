@@ -93,12 +93,12 @@ public class rpg {
                     }
                 if (playerCharacter.mana < 10 || (playerCharacter.mana < 100 && playerInput < 3) || (playerCharacter.mana < 100 && playerInput > 3)){
                     System.out.println("Not enough mana! Turn wasted!");
-                } else if (playerInput == 1) {
+                } else if (playerInput == 1) { //fireball
                     MagicRNG = random.nextInt(15)+5;
                     enemyCharacter.health = enemyCharacter.health - MagicRNG;
                     playerCharacter.mana = playerCharacter.mana - 10;
                     System.out.println("Your fireball hit for "+MagicRNG+" damage!");
-                } else if (playerInput == 2) {
+                } else if (playerInput == 2) { //heal
                     MagicRNG = random.nextInt(20);
                     playerCharacter.health = playerCharacter.health + MagicRNG;
                     playerCharacter.mana = playerCharacter.mana - 10;
@@ -107,16 +107,16 @@ public class rpg {
                     } else {
                         System.out.println("You healed yourself for "+MagicRNG+" health!");
                     }
-                } else {
+                } else { //death
                     break;
                 }
             }
 
-            if (enemyCharacter.health <= 0) {
+            if (enemyCharacter.health <= 0) { //if enemy die u win
                 break;
             }
 
-            System.out.println("=========ENEMY TURN=========");
+            System.out.println("=========ENEMY TURN========="); //self explanatory
             attack(enemyCharacter, playerCharacter);
             if (playerCharacter.health <=0) {
                 died = true;
@@ -143,7 +143,7 @@ public class rpg {
     }
 }
 
-
+    //compute an attack (includes dodge chance)
     public static void attack (player attacker, player defender) {
         if (defender.dodgeSuccess(defender) == false){
             System.out.println("Hit for "+attacker.attackPower+" damage!");
@@ -152,6 +152,8 @@ public class rpg {
             System.out.println("Attack Dodged!");
         }
     }
+
+    //generate an enemy with semi-random stats
     public static player generateEnemy(){
         Random random = new Random();
         player enemy = new player(0, random.nextInt(5)+7, 0, random.nextInt(50)+150, 0);
